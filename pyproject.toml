@@ -1,0 +1,28 @@
+[project]
+name = "ypi"
+version = "0.1.0"
+description = "Yfinance REST API"
+authors = [{name = "Felipe de Souza Valladão"}]
+license = "Unlicense"
+readme = "README.md"
+requires-python = ">=3.8,<3.11"
+dependencies = [
+  "numpy>=1,<2",
+  "pandas>=1.2.2,<2.0.0",
+  "fastapi>=0.63.0",
+  "uvicorn>=0.13.4",
+  "yfinance>=0.2.14",
+  "more-itertools>=10.0.0",
+]
+
+[build-system]
+requires = ["setuptools >= 59"]
+build-backend = "setuptools.build_meta"
+
+
+[project.optional-dependencies]
+dev = ["flake8>=3.8,<4", "ipython>=7,<9"]
+
+[project.scripts]
+ypi = 'ypi:serve'
+
